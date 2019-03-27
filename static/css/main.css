@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    background: #fafafa;
+}
+
+body{
+    color: #262626;
+}
+
+
+header {
+    height: 80px;
+    background-color: white;
+    color: #262626;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header--border {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.header__left {
+    flex: auto;
+}
+
+.header__center {
+    display: flex;
+    width: 600px;
+    align-items: center;
+}
+
+.header__center__logo {
+    flex: auto;
+}
+
+.header__center__logo__img{
+    width: 100px;
+}
+
+.header__center__logo__img:hover {
+    transform: scale(1.1);
+    transition-duration: 100ms;
+    transition-timing-function: ease-out;
+}
+
+.header__center__area {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+}
+
+.header__center__area__text{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.header__center__area__compassicon {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+}
+
+.header__center__area__compassicon--spin {
+    animation-name: compass-spin;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes compass-spin {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.header__right {
+    flex: auto;
+    align-items: center;
+}
+
+.header__right__login {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__right__login__btn{
+    border-radius: 3px;
+    border-color: #e6e6e6;
+    font-size: 14px;
+    margin-right: 24px;
+    width: max-content;
+    padding: 8px;
+    border-style: solid;
+    background-color: #fafafa;
+}
+
+
+.default-font {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.header__center__area__text__primary {
+    font-size: 18px;
+    
+}
+
+.header__center__area__text__secondary {
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .header__center__logo__img {
+        margin-left: 24px;
+        width: 100px;
+    }
+    .header__left{
+        flex: 0;
+    }
+    body{
+        width: 100%;
+    }
+    .header__center__area {
+        margin-right: 24px;
+        width: max-content;
+    }
+}
